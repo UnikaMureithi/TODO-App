@@ -14,3 +14,12 @@ exports.create = (req, res)=>{
 exports.read = (req, res)=>{
     res.send(tasks)
 }
+
+exports.update = (req, res)=>{
+    var {id} = req.params 
+    const index = tasks.findIndex((task)=>parseInt(task.id) === parseInt(id))
+    var {title, priority, createdAt, done, doneAt} = req.body //to be edited
+    tasks[index] = {id, title, priority, createdAt, done, doneAt}
+    res.send(tasks)
+    console.log(`updated tasks: ${JSON.stringify(tasks)}`)
+}
