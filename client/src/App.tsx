@@ -5,7 +5,7 @@ import Heading from './components/Heading';
 import BoxLayout from './components/BoxLayout';
 
 function App() {
-  const API_URL = "http://localhost:3500"
+  const API_URL = "http://localhost:3000"
   return (
 <div className="App">
       <BoxLayout>
