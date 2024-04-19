@@ -1,0 +1,12 @@
+var tasks = [
+    {id:1, title:"Cleaning", priority:1, createdAt:"Thurs Apr 18 2024", done:true, doneAt:"Thurs Apr 18 2024"},
+    {id:2, title:"Go shopping", priority:2, createdAt:"Fri Apr 19 2024", done:false, doneAt:"Sat Apr 20 2024"},
+    {id:3, title:"Cooking", priority:3, createdAt:"Sat Apr 20 2024", done:false, doneAt:"Sun Apr 21 2024"}
+]
+
+exports.create = (req, res)=>{
+    var {id, title, priority, createdAt, done, doneAt} = req.body
+    tasks.push({id, title, priority, createdAt, done, doneAt})
+    res.send(tasks)
+    console.log(`added to tasks: ${JSON.stringify(tasks)}`)
+}
