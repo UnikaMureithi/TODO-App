@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ViewTasks from './components/ViewTasks';
+import Heading from './components/Heading';
+import BoxLayout from './components/BoxLayout';
 
 function App() {
+  const API_URL = "http://localhost:3500/"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<div className="App">
+      <BoxLayout>
+        <Heading/>
+        <ViewTasks  API_URL = {API_URL}/>
+      </BoxLayout>
+    </div>  );
 }
 
 export default App;
