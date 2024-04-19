@@ -10,3 +10,7 @@ exports.create = (req, res)=>{
     res.send(tasks)
     console.log(`added to tasks: ${JSON.stringify(tasks)}`)
 }
+
+exports.read = (req, res)=>{
+    res.send(tasks)
+}
